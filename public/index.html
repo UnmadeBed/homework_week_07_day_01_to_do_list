@@ -4,24 +4,24 @@
     <meta charset="utf-8">
     <title></title>
   </head>
+  <link rel="stylesheet" href="./css/styles.css">
   <script src="./js/bundle.js"></script>
   <body>
     <div id="app">
       <h2>ToDo's</h2>
 
-      <form>
+      <form v-on:submit.prevent="saveNewItem">
         <input id="new-item" type="text" v-model="newItem"/>
-        <input type="radio" id="high" value="high">
+        <input type="radio" name="importance" id="high" value="high">
         <label for="high">High</label>
-        <input type="radio" id="low" value="low">
+        <input type="radio" name="importance" id="low" value="low">
         <label for="low">Low</label>
-        <input type="submit" value="Save Item"/>
+        <button type="submit" value="Save Item">Save Item</button
       </form>
 
       <ul>
         <li v-for="item in todos">{{ item }}</li>
       </ul>
-
 
 
     </div>
