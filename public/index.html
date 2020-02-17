@@ -7,10 +7,22 @@
   <script src="./js/bundle.js"></script>
   <body>
     <div id="app">
+      <h2>ToDo's</h2>
+
+      <form>
+        <input id="new-item" type="text" v-model="newItem"/>
+        <input type="radio" id="high" value="high">
+        <label for="high">High</label>
+        <input type="radio" id="low" value="low">
+        <label for="low">Low</label>
+        <input type="submit" value="Save Item"/>
+      </form>
 
       <ul>
         <li v-for="item in todos">{{ item }}</li>
       </ul>
+
+
 
     </div>
 
